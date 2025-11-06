@@ -1,0 +1,52 @@
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class Question2 extends Frame implements ActionListener {
+
+    Label nameLabel;
+    TextField nameTextField;
+    Button clickButton;
+
+    public Question2() {
+        setLayout(new FlowLayout());
+
+        
+        nameLabel = new Label("Enter your name:");
+        add(nameLabel);
+
+        nameTextField = new TextField(20);
+        add(nameTextField);
+
+        clickButton = new Button("Click Me");
+        add(clickButton);
+
+  
+        clickButton.addActionListener(this);
+
+        setTitle("AWT Demo");
+        setSize(350, 100);
+        setVisible(true);
+
+        
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent we) {
+                System.exit(0);
+            }
+        });
+    }
+
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == clickButton) {
+            String userName = nameTextField.getText();
+            System.out.println("Hello, " + userName);
+        }
+    }
+
+   
+    public static void main(String[] args) {
+        new Question2();
+    }
+}
