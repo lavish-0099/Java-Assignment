@@ -1,0 +1,60 @@
+
+public class Quetion1 {
+    static class Student {
+        String name;
+        int rollNo;
+
+        public Student(String name, int rollNo) {
+            this.name = name;
+            this.rollNo = rollNo;
+        }
+
+        public void printDetails() {
+            System.out.println("Name: " + name);
+            System.out.println("Roll No: " + rollNo);
+        }
+    }
+
+    static class BCAStudent extends Student {
+        int semester;
+
+        public BCAStudent(String name, int rollNo, int semester) {
+            super(name, rollNo); 
+            this.semester = semester;
+        }
+
+        @Override
+        public void printDetails() {
+            super.printDetails(); 
+            System.out.println("Semester: " + semester);
+            System.out.println("-------------");
+        }
+    }
+
+    public static void main(String[] args) {
+        
+    
+        String student_data = "lavish batra"; 
+
+        BCAStudent[] students = new BCAStudent[3];
+        students[0] = new BCAStudent(student_data, 1, 5); 
+        students[1] = new BCAStudent("shivam singh", 2, 5);
+        students[2] = new BCAStudent("Kashish verma", 3, 5);
+
+        System.out.println("--- Student Details ---");
+        for (BCAStudent bca_student : students) {
+            bca_student.printDetails();
+        }
+
+        System.out.println("\n--- Demonstrating Exception Handling ---");
+        try {
+            
+            System.out.println("Attempting to access index 10...");
+            students[10].printDetails();
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Exception caught!");
+            System.out.println("Error: " + e.getMessage());
+            System.out.println("You tried to access an invalid array index.");
+        }
+    }
+}
