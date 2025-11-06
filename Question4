@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavish Batra's Profile</title>
+</head>
+<body>
+
+    <h1>Lavish Batra</h1>
+    <p>Student ID: <span>230919000276</span></p>
+
+    <hr>
+
+    <h2>About Me</h2>
+    <p>
+        This is a paragraph about me for my assignment.
+        It includes <b>bold text</b> and <i>italic text</i>.
+        <br> This text appears after the line break.
+    </p>
+
+    <h2>My Subjects (5th Sem)</h2>
+    <ul>
+        <li> Java</li>
+        <li>Database Management Systems</li>
+        <li>Numericals Method</li>
+    </ul>
+
+    <hr>
+
+    <h2>My College</h2>
+    <p>Institute of Management Studies, Noida</p>
+    <img src="https://imsnoida.com/assets/images/logo.png" alt="College Logo" width="150">
+    
+    <h2>Contact Form</h2>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Assignment Code</h2>
+    <p>You can find all the code for this assignment on my GitHub.</p>
+    <a href="https://github.com/lavish-0099/Java-Assignment.git">View My GitHub Repo</a>
+
+    <hr>
+
+    <p>&copy; 2025 Lavish Batra. All rights reserved.</p>
+
+</body>
+</html>
